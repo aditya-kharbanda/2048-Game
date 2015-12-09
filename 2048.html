@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2048_game</title>
+	
+	<link rel="stylesheet" href="2048.css">
+  <script src="jquery-1.11.3.js"></script>
+	<script src="2048Main.js"></script>
+	<script src="use2048Main.js"></script>
+</head>
+<body>
+<div class="grid">
+
+   <div class="row">
+        <div class="innerbox"></div>
+        <div class="innerbox"></div>
+        <div class="innerbox"></div>
+        <div class="innerbox"></div>
+   </div>
+
+  <div class="row">
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  </div>
+
+  <div class="row">
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  </div> 
+
+  <div class="row">
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  	<div class="innerbox"></div>
+  </div>
+</div>
+
+<div id="curscore">SCORE<p>0</p></div>
+<button type="button" id="reset">RESET</button>
+<div id="high_score">HIGHSCORE<p>0</p></div>
+<script>
+            function init() {
+                initMyGame();
+            }
+            window.addEventListener('load', init);
+        </script>
+</body>
+</html>
