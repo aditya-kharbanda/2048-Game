@@ -1,0 +1,193 @@
+.grid
+{
+	background-color: #BBADA0;
+	box-sizing:border-box;
+margin: 0px auto;
+height:520px;
+width:520px;
+
+}
+.row
+{
+	display: flex;
+    justify-content:space-between;
+
+
+}
+
+.innerbox
+{
+	margin:10px;
+box-sizing: border-box;
+height: 110px;
+flex: 1 1 0%;
+/*text-align: center;
+
+font-size:49px;*/
+
+border-radius: 7px;
+background-color: rgba(238, 228, 218, 0.35);
+/*line-height: 110px;*/
+position:relative;
+}
+
+.innerbox::after
+{
+     position: absolute;
+	content: "";
+	/*font-size: 49px;*/
+	line-height: 110px;
+	text-align:center;
+	/*background-color:red;*/
+	left:0;
+	top:0;
+box-sizing: border-box;
+height: 110px; width:110px;
+/*flex: 1 1 0%;*/
+text-align: center;
+border-radius: 7px;
+font-weight:bold;
+}
+
+
+.innerbox_2{
+	background-color:#EEE4DA;
+}
+.innerbox_2::after{
+	content:"2";
+	font-size: 58px;
+}
+
+
+.innerbox_4{
+	background-color: #EDE0C8;
+}
+.innerbox_4::after{
+    content: "4";
+    font-size: 58px;
+}
+
+
+.innerbox_8{
+	background-color: #F2B179;
+	color: #f9f6f2;
+}
+.innerbox_8::after{
+   content:"8";
+   font-size: 58px;
+}
+
+
+.innerbox_16{
+	color: #f9f6f2;
+	background-color: #F59563;
+}
+.innerbox_16::after{
+   content: "16";
+   font-size: 58px; 
+}
+
+
+.innerbox_32{
+	color: #f9f6f2;
+	background-color: #F67C5F;
+}
+.innerbox_32::after{
+	content: "32";
+	font-size: 58px;
+}
+
+
+.innerbox_64{
+	color: #f9f6f2;
+	background-color: #F65E3B;
+}
+.innerbox_64::after{
+	content: "64";
+	font-size: 58px;
+}
+
+.innerbox_128{
+	color: #f9f6f2;
+	background-color: #EDCF72;
+}
+.innerbox_128::after{
+    content:"128";
+    font-size:43px;
+}
+
+
+.innerbox_256{
+	color:#F9F6F2;;
+	background-color: #EDCC61;
+}
+.innerbox_256::after{
+	content:"256";
+	font-size:42px;
+}
+
+
+.innerbox_512{
+	color: #f9f6f2;
+    background-color: #edc850;
+}
+.innerbox_512::after{
+    content:"512";
+    font-size: 40px;
+}
+
+
+.innerbox_1024{
+	  color: #f9f6f2;
+    background-color: #edc53f;
+}
+.innerbox_1024::after{
+	content: "1024";
+	font-size:35px;
+}
+
+
+.innerbox_2048{
+	color: #f9f6f2;
+    background: #edc22e;
+    
+}
+.innerbox_2048::after{
+	content: "2048";
+	font-size: 35px;
+}
+
+
+
+#curscore
+{
+
+	background-color:#C58C8C;
+    position: absolute;
+    top:2%;
+}
+
+#high_score
+{
+  background-color:#C58C8C;
+    position: absolute;
+    top:2%;
+    left:90%;	
+}
+p
+{
+	text-align: center;
+	margin:0;
+}
+#reset
+{
+	background-color: #C58C8C;
+position: absolute;
+left: 926px;
+top: 2%;
+width: 100px;
+height: 43px;
+color: purple;
+font-weight: 500;
+font-size: 23px;
+}
