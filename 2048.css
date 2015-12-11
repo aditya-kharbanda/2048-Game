@@ -70,6 +70,7 @@ font-weight:bold;
 
 .innerbox_8{
 	background-color: #F2B179;
+	color: #f9f6f2;
 }
 .innerbox_8::after{
    content:"8";
@@ -78,7 +79,7 @@ font-weight:bold;
 
 
 .innerbox_16{
-	color: #F9F6F2;
+	color: #f9f6f2;
 	background-color: #F59563;
 }
 .innerbox_16::after{
@@ -88,7 +89,7 @@ font-weight:bold;
 
 
 .innerbox_32{
-	color: #F9F6F2;
+	color: #f9f6f2;
 	background-color: #F67C5F;
 }
 .innerbox_32::after{
@@ -98,7 +99,7 @@ font-weight:bold;
 
 
 .innerbox_64{
-	color: #F9F6F2;
+	color: #f9f6f2;
 	background-color: #F65E3B;
 }
 .innerbox_64::after{
@@ -107,7 +108,7 @@ font-weight:bold;
 }
 
 .innerbox_128{
-	color: #F9F6F2;
+	color: #f9f6f2;
 	background-color: #EDCF72;
 }
 .innerbox_128::after{
@@ -127,7 +128,8 @@ font-weight:bold;
 
 
 .innerbox_512{
-	background-color: #30F813;
+	color: #f9f6f2;
+    background-color: #edc850;
 }
 .innerbox_512::after{
     content:"512";
@@ -136,7 +138,8 @@ font-weight:bold;
 
 
 .innerbox_1024{
-	background-color: #13F8C8; 
+	  color: #f9f6f2;
+    background-color: #edc53f;
 }
 .innerbox_1024::after{
 	content: "1024";
@@ -145,7 +148,9 @@ font-weight:bold;
 
 
 .innerbox_2048{
-	background-color: #13F8C8;
+	color: #f9f6f2;
+    background: #edc22e;
+    
 }
 .innerbox_2048::after{
 	content: "2048";

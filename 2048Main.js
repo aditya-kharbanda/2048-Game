@@ -22,24 +22,23 @@ var game = (function(){
     el_class_name = className
   
 
-  	 if(el_class_name===undefined)
-    	{
-  	  	throw "enter a valid element";
-    	}
+     if(el_class_name===undefined)
+      {
+        throw "enter a valid element";
+      }
    //console.log(el_class_name);
       gridItems = document.getElementsByClassName(className);
      // console.log(gridItems);
 
      if(gridItems===null)
       {
-     	 throw "element does not exist";
+       throw "element does not exist";
       }
      loadFromLocalStorage();
-     
      render();
      gameplay();
 
-     if(highScore===0){
+     if(highScore===0 || isNaN(highScore)){
       console.log("high 0");
      addtile();addtile();
      render();
@@ -52,10 +51,11 @@ var game = (function(){
  function loadFromLocalStorage()
   { 
     highScore = parseInt(localStorage.getItem("highScore"));
-   
-    if(highScore !==0)
+    
+    if(highScore !==0 && !isNaN(highScore))
       {
         console.log("high not 0");
+        console.log("highScore", highScore);
        score = parseInt(localStorage.getItem("score"));
        arena = JSON.parse(localStorage.getItem("arena"));
        gameOver = parseInt(localStorage.getItem("gameOver"));
@@ -67,7 +67,6 @@ var game = (function(){
         } 
       }
    }
-
 
   function updateLocalStorage() 
   {
@@ -183,7 +182,7 @@ function gameplay()
 
           gameOver = 1;updateLocalStorage();
           console.log("updating gameOver2");
-          alert("Game Over!");
+          alert("Game Over1!");
           throw "game over";
           return;
         }
@@ -196,7 +195,7 @@ function gameplay()
       {
         gameOver = 1;updateLocalStorage();
         console.log("updating gameOver3");
-        alert("Game Over!");
+        alert("Game Over2!");
         throw "game over";
         return;
       }
@@ -267,7 +266,9 @@ function moveHori( i, j, d )
       if( j + d > 0 )
        moveHori( i, j + d, -1 );
     }
+    updateHighScore();
    return;
+   
 }
 
 
@@ -301,8 +302,9 @@ function moveVerti( i, j, d )
       if( i + d > 0 ) 
         moveVerti( i + d, j, -1 ); 
     }
-
+  updateHighScore();
   return;
+
 }
 
 
@@ -393,11 +395,19 @@ function make_move( e )
   }
 
 
+
+
 function updateHighScore()
  {
-  if(score > highScore)
+  if(isNaN(highScore))
+  {
+    highScore=score;
+  }
+  else if(score > highScore)
     highScore = score;
  }
+
+
 
 function testAdd( i , j , v)
 {
@@ -419,6 +429,9 @@ function reset()
   arena = [[{"first": 0 , "second": false},{"first": 0 , "second": false},{"first": 0 , "second": false},{"first": 0 , "second": false}],[{"first": 0 , "second": false},{"first": 0 , "second": false},{"first": 0 , "second": false},{"first": 0 , "second": false}],[{"first": 0 , "second": false},{"first": 0 , "second": false},{"first": 0 , "second": false},{"first": 0 , "second": false}],[{"first": 0 , "second": false},{"first": 0 , "second": false},{"first": 0 , "second": false},{"first": 0 , "second": false}]];
   score = 0;
   gameOver = 0;
+  done = false;
+  win = false;
+  moved = false;
   addtile();
   addtile();
 }
@@ -426,6 +439,7 @@ function reset()
 function resetGame()
 {
   reset();
+
   updateLocalStorage();
   render();
 }
